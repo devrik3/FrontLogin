@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'open Sans';
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+html,body{overflow: hidden;}
+body{background: #292A35;}
+.logoImg{
+    display: flex;
+    background: #333;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, .15);
+    width: 150px;
+    height: 150px;
+    margin: 0 0 30%;
+    border-radius: 50%;
+}
+.login form{
+    width: 20rem;
+    height: 10rem;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.login form input{
+    width: 95%;
+    height: 2.3rem;
+    padding: 0 3% 0;  
+    border: 1.5px solid #31313b;
+    margin: 1%;
+    background: #383946;
+    outline: none;
+    color: #bdbdc0;
+    box-shadow: 0 0 0;
+}
+.login form button{
+    width: 102%;
+    height: 2.3rem;  
+    border: 1.5px solid #31313b;
+    margin: .5%;
+    background: #3e3e4b;
+    color: #bdbdc0;
+    outline: none;
+    box-shadow: 0 0 0;
+    cursor: pointer;
+}
+.login form button:hover{
+    filter: brightness(90%);
+}
+input:focus{outline: none; box-shadow:  0 0 0;}
+.login form .newUser, form .newUser a{
+    margin: 7% 0;
+    color: #bdbdc0;
+    font-size: 11pt;
+}
+.login form .newUser a{
+    color: #B2B2B5;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cxErro .ErroContainer{
+    margin: 20% auto;
+    background: rgba(196, 69, 69, .40);
+    max-width: 90%;
+    text-align: center;
+    padding: .8%;
+    height: 25%;
+    color: #B2B2B5;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, .05);
+    display: none;
+}
+.progress{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.p1{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-top: 1.5px solid #B2B2B5;
+    border-radius: 50%;
+    animation: rotation .3s ease-in-out infinite;
+}
+.p2{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-bottom: 1.5px solid rgb(19, 17, 17);
+    border-radius: 50%;
+    animation: rotation .3s ease-in infinite;
+}
+@keyframes rotation{
+    0%{transform: rotate(0);}
+    25%{transform: rotate(80deg);}
+    50%{transform: rotate(100deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.animRegister{
+    animation: hideForm .6s ease-in-out;
+    animation-fill-mode: both;
+    /*animation-delay: 1s;   */
+}
+
+@keyframes hideForm{
+    0%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100%{
+        top: 35%;
+        left: 140%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+}
+
+.register form{
+    width: 20rem;
+    height: 10rem;
+    position: absolute;
+    top: 35%;
+    left: -33%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.register form input{
+    width: 95%;
+    height: 2.3rem;
+    padding: 0 3% 0;  
+    border: 1.5px solid #31313b;
+    margin: 1%;
+    background: #383946;
+    outline: none;
+    color: #bdbdc0;
+    box-shadow: 0 0 0;
+}
+.register form button{
+    width: 102%;
+    height: 2.3rem;  
+    border: 1.5px solid #31313b;
+    margin: .5%;
+    background: #3e3e4b;
+    color: #bdbdc0;
+    outline: none;
+    box-shadow: 0 0 0;
+    cursor: pointer;
+}
+.register form button:hover{
+    filter: brightness(90%);
+}
+.register form .oldUser, form .oldUser a{
+    margin: 7% 0;
+    color: #bdbdc0;
+    font-size: 11pt;
+}
+.register form .oldUser a{
+    color: #B2B2B5;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.animCX{
+    animation: viewForm .6s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes viewForm{
+    0%{
+        top: 35%;
+        left: -90%;
+        transform: translate(-50%, -50%);
+        /*display: flex;*/
+    }
+    100%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*display: none;*/
+    }
+}
+
+.animForm{
+    animation: viewFormII .6s ease-in-out;
+    animation-fill-mode: both;
+    /*animation-delay: 1s;   */
+}
+
+@keyframes viewFormII{
+    0%{
+        top: 35%;
+        left: 140%;
+        transform: translate(-50%, -50%);
+    }
+    100%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+}
+.animBX{
+    animation: hideREG .6s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes hideREG{
+    0%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*display: flex;*/
+    }
+    100%{
+        top: 35%;
+        left: -90%;
+        transform: translate(-50%, -50%);
+        /*display: none;*/
+    }
+}

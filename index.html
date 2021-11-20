@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>LOGIN | INDEX</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="document">
+
+	<div class="cxErro">
+		<div class="ErroContainer" id="boxError">
+			<p id="erro">AAAA</p>
+		</div>
+	</div>
+	<main>
+		<article class="login">
+			<form id="form" method="POST">
+				<div class="logoImg"></div>
+				<input type="text" id="POSTname" placeholder="Nome Sobrenome">
+				<input type="email" id="POSTemail" placeholder="user@example.com">
+				<input type="password" id="POSTpass" placeholder="********">
+				<button type="submit">Login</button>
+
+				<div class="newUser">
+					<p>Novo Usuario? <a id="registerBTN">Registre-se aqui!</a></p>
+				</div>
+			</form>
+		</article>
+
+		<article class="register">
+			<form id="formRegister" method="POST">
+				<div class="logoImg"></div>
+				<input type="text" id="REGname" placeholder="Nome Sobrenome">
+				<input type="email" id="REGemail" placeholder="user@example.com">
+
+				<input type="password" id="REGpass" placeholder="********">
+				<input type="password" id="CONFIRMpass" placeholder="Confirm your pass">
+				<button type="submit">Register</button>
+
+				<div class="oldUser">
+					<p>Já possui uma conta? <a id="loginBTN">Faça Login</a></p>
+				</div>
+			</form>
+		</article>
+	</main>
+	<div class="progress">
+		<p class="p1"></p>
+		<p class="p2"></p>
+	</div>
+<script src="js/login.js"></script>
+<script src="js/register.js"></script>
+<script src="js/newUser.js"></script>
+</script>
+</body>
+</html>

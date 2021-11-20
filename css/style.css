@@ -188,13 +188,13 @@ input:focus{outline: none; box-shadow:  0 0 0;}
         top: 35%;
         left: -90%;
         transform: translate(-50%, -50%);
-        /*display: flex;*/
+        display: none;
     }
     100%{
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /*display: none;*/
+        display: flex;
     }
 }
 
@@ -208,13 +208,14 @@ input:focus{outline: none; box-shadow:  0 0 0;}
     0%{
         top: 35%;
         left: 140%;
+        display: none;
         transform: translate(-50%, -50%);
     }
     100%{
         top: 35%;
         left: 50%;
+        display: flex;
         transform: translate(-50%, -50%);
-        display: none;
     }
 }
 .animBX{
@@ -227,12 +228,12 @@ input:focus{outline: none; box-shadow:  0 0 0;}
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /*display: flex;*/
+        display: flex;
     }
     100%{
         top: 35%;
         left: -90%;
         transform: translate(-50%, -50%);
-        /*display: none;*/
+        display: none;
     }
 }

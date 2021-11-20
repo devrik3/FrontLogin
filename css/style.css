@@ -121,6 +121,7 @@ input:focus{outline: none; box-shadow:  0 0 0;}
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: flex;
     }
     100%{
         top: 35%;

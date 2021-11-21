@@ -10,7 +10,7 @@
     -ms-user-select: none;
 }
 html,body{overflow: hidden;}
-body{background: #292A35;}
+body{background: #292A35; overflow: hidden;}
 .logoImg{
     display: flex;
     background: #333;
@@ -110,26 +110,6 @@ input:focus{outline: none; box-shadow:  0 0 0;}
     100%{transform: rotate(360deg);}
 }
 
-.animRegister{
-    animation: hideForm .6s ease-in-out;
-    animation-fill-mode: both;
-    /*animation-delay: 1s;   */
-}
-
-@keyframes hideForm{
-    0%{
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    100%{
-        top: 35%;
-        left: 140%;
-        transform: translate(-50%, -50%);
-        display: none;
-    }
-}
 
 .register form{
     width: 20rem;
@@ -138,7 +118,7 @@ input:focus{outline: none; box-shadow:  0 0 0;}
     top: 35%;
     left: -33%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -178,10 +158,52 @@ input:focus{outline: none; box-shadow:  0 0 0;}
     cursor: pointer;
     text-decoration: underline;
 }
+.login .animRegister{
+    animation: hideFormI .6s ease-in-out;
+    animation-fill-mode: both;
+}
 
-.animCX{
+@keyframes hideFormI{
+    0%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    100%{
+        top: 35%;
+        left: 130%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+
+.login .animForm{
+    animation: viewFormIII .6s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes viewFormIII{
+    0%{
+        top: 35%;
+        left: 130%;
+        transform: translate(-50%, -50%);
+
+    }
+    100%{
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+
+.register .animCX{
     animation: viewForm .6s ease-in-out;
     animation-fill-mode: both;
+    display: flex;
 }
 
 @keyframes viewForm{
@@ -189,37 +211,15 @@ input:focus{outline: none; box-shadow:  0 0 0;}
         top: 35%;
         left: -90%;
         transform: translate(-50%, -50%);
-        display: none;
     }
     100%{
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: flex;
-    }
-}
 
-.animForm{
-    animation: viewFormII .6s ease-in-out;
-    animation-fill-mode: both;
-    /*animation-delay: 1s;   */
-}
-
-@keyframes viewFormII{
-    0%{
-        top: 35%;
-        left: 140%;
-        display: none;
-        transform: translate(-50%, -50%);
-    }
-    100%{
-        top: 35%;
-        left: 50%;
-        display: flex;
-        transform: translate(-50%, -50%);
     }
 }
-.animBX{
+.register .animBX{
     animation: hideREG .6s ease-in-out;
     animation-fill-mode: both;
 }
@@ -229,12 +229,11 @@ input:focus{outline: none; box-shadow:  0 0 0;}
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: flex;
     }
     100%{
         top: 35%;
         left: -90%;
         transform: translate(-50%, -50%);
-        display: none;
+
     }
 }

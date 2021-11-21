@@ -7,13 +7,22 @@ let registerCX = document.getElementById('formRegister');
 registerANIM.addEventListener('click', function(){
         formANIM.classList.add('animRegister'); //hide form
         registerCX.classList.add('animCX'); //view form
+
+        var timeOut = setTimeout(function timernone(){
+            nameError = formANIM.style.display = 'none';
+        }, 400);
 });
 
 loginANIM.addEventListener('click', function(){
         formANIM.classList.add('animForm'); //view form
         registerCX.classList.add('animBX'); //hide form
-        Document.reload();
+
+
+        var timeOut = setTimeout(function timernone(){
+            nameError = formANIM.style.display = 'flex';
+        }, 100);
+
+        var timeOutI = setTimeout(function timernone(){
+            nameError = registerCX.style.display = 'none';
+        }, 100);
 });
-
-
-

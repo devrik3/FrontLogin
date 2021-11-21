@@ -18,3 +18,8 @@
   <hr>
  - Thanks for visiting. <br>
  - Enjoy it!! o/
+
+    
+    <br>
+    
+    v2.0

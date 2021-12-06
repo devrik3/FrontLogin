@@ -6,7 +6,7 @@
 	<title>LOGIN | INDEX</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="document">
 
 	<div class="cxErro">
 		<div class="ErroContainer" id="boxError">
@@ -16,8 +16,9 @@
 	<main>
 		<article class="login">
 			<form id="form" method="POST">
-				<div class="logoImg"></div>
-				<input type="text" id="POSTname" placeholder="Nome Sobrenome">
+				<div class="logoIcon">
+					<i class="logoImg fas fa-user-circle"></i>
+				</div>
 				<input type="email" id="POSTemail" placeholder="user@example.com">
 				<input type="password" id="POSTpass" placeholder="********">
 				<button type="submit">Login</button>
@@ -30,7 +31,9 @@
 
 		<article class="register">
 			<form id="formRegister" method="POST">
-				<div class="logoImg"></div>
+				<div class="logoIcon">
+					<i class="logoImg fas fa-user-circle"></i>
+				</div>
 				<input type="text" id="REGname" placeholder="Nome Sobrenome">
 				<input type="email" id="REGemail" placeholder="user@example.com">
 
@@ -44,13 +47,17 @@
 			</form>
 		</article>
 	</main>
-	<div class="progress">
+
+	<footer>
+		<p>O email é: dev@rik3.op, e a senha é: dev</p>
+	</footer>
+	<div class="progress" id="progress">
 		<p class="p1"></p>
 		<p class="p2"></p>
 	</div>
 <script src="js/login.js"></script>
 <script src="js/register.js"></script>
 <script src="js/newUser.js"></script>
-</script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
 </body>
 </html>

@@ -5,8 +5,8 @@ let formANIM = document.getElementById('form');
 let registerCX = document.getElementById('formRegister');
 
 registerANIM.addEventListener('click', function(){
-        formANIM.classList.add('animRegister'); //hide form
-        registerCX.classList.add('animCX'); //view form
+        formANIM.classList.toggle('animRegister'); //hide form
+        registerCX.classList.toggle('animCX'); //view form
 
         var timeOut = setTimeout(function timernone(){
             nameError = formANIM.style.display = 'none';
@@ -14,8 +14,8 @@ registerANIM.addEventListener('click', function(){
 });
 
 loginANIM.addEventListener('click', function(){
-        formANIM.classList.add('animForm'); //view form
-        registerCX.classList.add('animBX'); //hide form
+        formANIM.classList.toggle('animForm'); //view form
+        registerCX.classList.toggle('animBX'); //hide form
 
 
         var timeOut = setTimeout(function timernone(){
@@ -26,3 +26,6 @@ loginANIM.addEventListener('click', function(){
             nameError = registerCX.style.display = 'none';
         }, 100);
 });
+
+
+

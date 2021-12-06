@@ -165,8 +165,10 @@ input:focus{outline: none; box-shadow:  0 0 0;}
     animation-fill-mode: both;
 }
 footer{
-    position: absolute; 
-    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2% 0 0;
 }
 footer p{
     color: #FFF;

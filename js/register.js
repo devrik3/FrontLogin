@@ -5,48 +5,36 @@ let senhaReg = document.getElementById('REGpass'); // Chamando a senha
 let senhaConfirm = document.getElementById('CONFIRMpass'); // confirmaçao da senha
 let erroReg = document.getElementById('erro'); //Chamando a duvida
 let cxErroReg = document.getElementById('boxError');
+
+let mensagemErro = 'Preencha todos os campos. :/';
 formReg.addEventListener('submit', function(e){
-	if(nomeReg.value == ''){
-		erroReg.innerHTML = 'Preencha todos os campos. :/';
+        if (nomeReg.value === '' || emailReg.value === '' || senhaReg.value === '' || senhaConfirm.value === ''){
+                erroReg.innerHTML = mensagemErro;
                 var nameError = cxErroReg.style.display = 'block';
-                var timeOut = setTimeout(function timernone(){
-        	nameError = cxErroReg.style.display = 'none';
-                }, 2500);
-                e.preventDefault();
-	}else{}
-
-	if(emailReg.value == ''){
-		erroReg.innerHTML = 'Preencha todos os campos. :/';
-                var nameError = cxErroReg.style.display = 'block';
-                var timeOut = setTimeout(function timernone(){
-        	nameError = cxErroReg.style.display = 'none';
-                }, 2500);
-                e.preventDefault();
-	}else{}
-
-        if(senhaReg.value == ''){
-                erroReg.innerHTML = 'Preencha todos os campos. :/';
-                var nameError = cxErroReg.style.display = 'block';
-                var timeOut = setTimeout(function timernone(){
-                nameError = cxErroReg.style.display = 'none';
-                }, 2500);
-                e.preventDefault();
-        }else{}
-        if(senhaConfirm.value == ''){
-                erroReg.innerHTML = 'Preencha todos os campos. :/';
-                var nameError = cxErroReg.style.display = 'block';
-                var timeOut = setTimeout(function timernone(){
-                nameError = cxErroReg.style.display = 'none';
+                var timeOut = setTimeout(() => {
+                        nameError = cxErroReg.style.display = 'none';
                 }, 2500);
                 e.preventDefault();
         }else if(senhaReg.value === senhaConfirm.value){
                 e.preventDefault();
-        }
-        else{
-                erroReg.innerHTML = 'As senhas não Coincidem. :/';
+                
+                let novoUsuario = {
+                                   nome: nomeReg.value,
+                                   email: emailReg.value,
+                                   senha: senhaConfirm.value
+                                   }
+                                   
+                console.log(novoUsuario)
+                erroReg.innerHTML = 'seu E-mail é: ' + novoUsuario.email + ', e sua senha é: ' + novoUsuario.senha;
                 var nameError = cxErroReg.style.display = 'block';
-                var timeOut = setTimeout(function timernone(){
-                nameError = cxErroReg.style.display = 'none';
+                var timeOut = setTimeout(() => {
+                        nameError = cxErroReg.style.display = 'none';
+                }, 5500);
+        }else{
+                erroReg.innerHTML = 'Algo deu errado!';
+                var nameError = cxErroReg.style.display = 'block';
+                var timeOut = setTimeout(() => {
+                        nameError = cxErroReg.style.display = 'none';
                 }, 2500);
                 e.preventDefault();
         }
